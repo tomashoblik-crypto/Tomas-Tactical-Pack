@@ -10,11 +10,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Rozbalit ZIP
-        run: unzip -o Tomas_Tactical_Pack.zip
+      - name- name: Rozbalit ZIP a vypsat soubory
+  run: |
+    unzip -o Tomas_Tactical_Pack.zip
+    echo "=== Obsah ==="
+    find . -maxdepth 3
 
       - name: Nastavit Java 17
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@uv4
         with:
           distribution: temurin
           java-version: '17'
